@@ -47,8 +47,8 @@ for i in range(0, Nlat):
     AllLat[:, i] = latspeed
             
 
-cmap =  mcolors.ListedColormap(['purple', 'blue', 'green', 'yellow', 'red', 'grey'])
-bounds= [-20, -5, 10, 25, 40, 55, 1000]
+cmap =  mcolors.ListedColormap([(0,0,1), (1,0,0), (1,0,0), (1,0,0), (1,0,0), (0,1,0), (1,0,0), (1,0,0), (1,0,0), (1,0,0), (1,0,0)])
+bounds= [-20, -12.5, -5, 2.5, 10, 17.5, 25, 32.5, 40, 47.5, 55, 62.5, 1000]
 norm =  mcolors.BoundaryNorm(bounds, cmap.N)
 
 img = plt.imshow(AllLat, interpolation='nearest', origin='lower',
