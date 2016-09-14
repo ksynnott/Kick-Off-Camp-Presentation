@@ -63,9 +63,9 @@ plt.show()
 ##
 ##background = Image.open("OutLine_of_Earth.png")
 ##foreground = Image.open("WindSpeed.png")
-
-background.paste(foreground, (0, 0), foreground)
-background.show()
+##
+##background.paste(foreground, (0, 0), foreground)
+##background.show()
 
 
 
