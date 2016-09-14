@@ -59,10 +59,10 @@ plt.savefig('WindSpeed.png')
 plt.show()
 
 
-from PIL import Image
-
-background = Image.open("OutLine_of_Earth.png")
-foreground = Image.open("WindSpeed.png")
+##from PIL import Image
+##
+##background = Image.open("OutLine_of_Earth.png")
+##foreground = Image.open("WindSpeed.png")
 
 background.paste(foreground, (0, 0), foreground)
 background.show()
