@@ -48,14 +48,22 @@ for i in range(0, Nlat):
             
 
 cmap =  mcolors.ListedColormap([(0.7, 0.0, 0.4),(0.4,0,0.4), (0,0,1), (0,0.5,1), (0,1,1), (0,1,0.5), (0,1,0), (0.5,1,0), (1,1,0), (1,0.5,0), (1,0.2,0), (1,0,0),(0.1,0.1,0.1) ])
-bounds= [-1000,-20, -12.5, -5, 2.5, 10, 17.5, 25, 32.5, 40, 47.5, 55, 62.5, 1000]
+bounds= [-1000,-20, -12.5, -5, 2.5, 10, 17.5, 25, 30, 35, 42.5, 50, 62.5, 1000]
 norm =  mcolors.BoundaryNorm(bounds, cmap.N)
 
 img = plt.imshow(AllLat, interpolation='nearest', origin='lower',
                     cmap=cmap, norm=norm, alpha=0.6)
 
-plt.colorbar(img, cmap=cmap, norm=norm, boundaries=bounds)
-plt.
+plt.colorbar(img, cmap=cmap, norm=norm, boundaries=bounds, ticks=[-20, -5, 10, 25, 35, 50])
+
+theXticks = np.arange(0, 1001, 166)
+theYticks = np.arange(0, 1001, 166)
+X_labels = ['0', '60E', '120E', '180E', '120W', '60W', '0']
+Y_labels = ['90S', '60S', '30S', 'EQ', '30N', '60N', '90N']
+
+
+plt.xticks(theXticks, X_labels)
+plt.yticks(theYticks, Y_labels)
 plt.savefig('WindSpeed.png')
 plt.show()
 
