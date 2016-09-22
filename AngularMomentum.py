@@ -7,19 +7,20 @@ import matplotlib.colors as mcolors
 # First we can calculate the angular momentum wind (per unit mass)
 # at the equator.
 u = -15.0                   # Speed at equator
-omega = 7.27*(10**(-5))    # Rotation of earth in 1/s
-r = 6371*(10**(3))         # Radius of earth
+omega = 7.27*(10**(-5))     # Rotation of earth in 1/s
+r = 6371*(10**(3))          # Radius of earth
 
-m = (u + omega*r)*r
+m = (u + omega*r)*r         # Zonal mean momentum
 
 # Function to calculate the speed per unit mass of the wind
 # at a certain latitude by using the conservation of
 # angular momtenum.
+
 def speed(theta):
     u = -21.0                   # Speed at equator
-    omega = 7.27*(10**(-5))    # Rotation of earth in 1/s
-    r = 6371*(10**(3))         # Radius of earth
-    m = (u + omega*r)*r        # Angular Momentun at equator
+    omega = 7.27*(10**(-5))     # Rotation of earth in 1/s
+    r = 6371*(10**(3))          # Radius of earth
+    m = (u + omega*r)*r         # Angular Momentun at equator
 
     tmp1 = r*np.cos(theta)
     
@@ -27,7 +28,7 @@ def speed(theta):
 
 
 
-# So we want to generate data for a "contor plot"
+# So we want to generate data for a "contour plot"
 # First an array from -pi/2 to pi/2
 # i.e every lattitude of the earth
 N = 1000
